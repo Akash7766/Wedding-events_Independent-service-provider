@@ -5,7 +5,9 @@ const Header = () => {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">Wedding Events</Navbar.Brand>
+        <Navbar.Brand href="#home" className="fw-bold">
+          Wedding Events
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
@@ -13,7 +15,7 @@ const Header = () => {
             <Nav.Link href="#">Blogs</Nav.Link>
             <Nav.Link href="#">About</Nav.Link>
             <Nav.Link href="#">Signup</Nav.Link>
-            <Nav.Link href="#">Login</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

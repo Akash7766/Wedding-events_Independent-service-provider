@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "SHOOTING",
+    "img": "https://i.ibb.co/9YbDDVM/service1.png",
+    "price": 1200,
+    "description": "I capture your wedding photos very impresively. i charged only 1200$ for one events."
+  },
+  {
+    "id": 2,
+    "name": "EDITING",
+    "img": "https://i.ibb.co/DLSNBY4/service2.png",
+    "price": 1500,
+    "description": "I edite your wedding photos as like you want. i charged only 1500$ for one events."
+  },
+  {
+    "id": 3,
+    "name": "COMBO",
+    "img": "https://i.ibb.co/pr4bmmP/service3.png",
+    "price": 2500,
+    "description": "This is combo package. Capture and Edite both service are include here and cost for only 2500$ per event."
+  }
+]
