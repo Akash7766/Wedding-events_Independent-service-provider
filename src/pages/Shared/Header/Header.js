@@ -30,12 +30,12 @@ const Header = () => {
               About
             </Nav.Link>
             {user ? (
-              <button
+              <span
                 onClick={handleSignOut}
-                className="btn btn-warning bg-transparent"
+                className="nav-link text-danger pointer "
               >
                 Logout
-              </button>
+              </span>
             ) : (
               <div className="d-flex">
                 <Nav.Link as={Link} to="signup">
