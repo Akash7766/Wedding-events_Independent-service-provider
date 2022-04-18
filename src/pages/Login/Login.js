@@ -4,17 +4,22 @@ import {
   useAuthState,
   useSignInWithEmailAndPassword,
 } from "react-firebase-hooks/auth";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import GoogleLogin from "./GoogleLogin";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [currentUser] = useAuthState(auth);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   const navigate = useNavigate();
+
   if (currentUser) {
-    navigate("/checkout");
+    navigate(from, { replace: true });
   }
   const handleLogin = (event) => {
     event.preventDefault();
@@ -51,6 +56,12 @@ const Login = () => {
                   required
                 />
               </Form.Group>
+
+              {error && (
+                <div className="my-4">
+                  <p>{error.code}</p>
+                </div>
+              )}
 
               <Button variant="primary" type="submit">
                 Login
