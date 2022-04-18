@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import GoogleLogin from "./GoogleLogin";
 
 const Login = () => {
   return (
@@ -40,6 +41,7 @@ const Login = () => {
               </Link>
             </p>
           </div>
+          <GoogleLogin></GoogleLogin>
         </div>
       </div>
     </div>

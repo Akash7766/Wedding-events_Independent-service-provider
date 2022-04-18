@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import GoogleLogin from "./GoogleLogin";
 
 const signup = () => {
   return (
@@ -10,7 +11,7 @@ const signup = () => {
         <div className="col-md-6 mx-auto">
           <div className=" p-4 border rounded shadow">
             <Form>
-              <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Group className="mb-3" controlId="formBasicName">
                 <Form.Label>Name</Form.Label>
                 <Form.Control
                   type="text"
@@ -40,6 +41,7 @@ const signup = () => {
               </Link>
             </p>
           </div>
+          <GoogleLogin></GoogleLogin>
         </div>
       </div>
     </div>
