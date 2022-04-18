@@ -23,10 +23,10 @@ const Header = () => {
             <Nav.Link as={Link} to="/home">
               Home
             </Nav.Link>
-            <Nav.Link as={Link} to="#">
+            <Nav.Link as={Link} to="/blogs">
               Blogs
             </Nav.Link>
-            <Nav.Link as={Link} to="#">
+            <Nav.Link as={Link} to="about">
               About
             </Nav.Link>
             {user ? (
@@ -37,7 +37,7 @@ const Header = () => {
                 Logout
               </span>
             ) : (
-              <div className="d-flex">
+              <div className="flex-column flex-md-row d-flex ">
                 <Nav.Link as={Link} to="signup">
                   Signup
                 </Nav.Link>

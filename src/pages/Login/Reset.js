@@ -14,6 +14,7 @@ const Reset = () => {
     event.preventDefault();
     const email = event.target.email.value;
     await sendPasswordResetEmail(email);
+    toast("Check your email for reset password");
   };
   return (
     <div className="mt-5 container">
