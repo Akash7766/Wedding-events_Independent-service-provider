@@ -7,8 +7,6 @@ import {
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import GoogleLogin from "./GoogleLogin";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const [currentUser] = useAuthState(auth);

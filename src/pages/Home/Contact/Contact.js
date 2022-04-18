@@ -6,6 +6,9 @@ import "react-toastify/dist/ReactToastify.css";
 const Contact = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
+    event.target.name.value = "";
+    event.target.email.value = "";
+    event.target.text.value = "";
     toast("Thaks for sending a message.");
   };
   return (
@@ -34,13 +37,19 @@ const Contact = () => {
               <Form.Control
                 type="text"
                 placeholder="Enter Your Name"
+                name="name"
                 required
               />
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>email</Form.Label>
-              <Form.Control type="email" placeholder="Your Email" required />
+              <Form.Control
+                type="email"
+                placeholder="Your Email"
+                name="email"
+                required
+              />
             </Form.Group>
             <div className="mb-3">
               <label
@@ -54,6 +63,7 @@ const Contact = () => {
                 id="exampleFormControlTextarea1"
                 rows="3"
                 placeholder="type here"
+                name="text"
                 required
               ></textarea>
             </div>

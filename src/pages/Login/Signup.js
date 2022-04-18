@@ -11,7 +11,7 @@ import GoogleLogin from "./GoogleLogin";
 const Signup = () => {
   const [currentUser] = useAuthState(auth);
   const [createUserWithEmailAndPassword, user, loading, error] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
   const navigate = useNavigate();
   if (currentUser) {
@@ -60,6 +60,12 @@ const Signup = () => {
                   required
                 />
               </Form.Group>
+
+              {error && (
+                <div className="my-4">
+                  <p>{error.code}</p>
+                </div>
+              )}
 
               <Button variant="primary" type="submit">
                 Signup
